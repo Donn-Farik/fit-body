@@ -23,11 +23,15 @@ function Plans() {
                   return (
                     <div className="feature">
                       <img src={witeTick} alt="" />
-                      <span key={i}></span>
+                      <span key={i}>{feature}</span>
                     </div>
                   );
                 })}
               </div>
+              <div>
+                <span> See more benefits</span>
+              </div>
+              <button className="btn">Join now</button>
             </div>
           );
         })}
