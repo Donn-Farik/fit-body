@@ -5,15 +5,22 @@ import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
-
+import { motion } from "framer-motion";
+const transition = { type: "spring", duration: 3 };
+const mobile = window.innerWidth <= 768 ? true : false;
 function Hero() {
   return (
     <div className="hero">
+      <div className="blur hero-blur"></div>
       <div className="left-h">
         <Header />
         {/* the best ad */}
         <div className="the-best-ad">
-          <div></div>
+          <motion.div
+            initial={{ left: mobile ? "160px" : "238px" }}
+            whileInView={{ left: "8px" }}
+            transition={transition} // Ajusta la duración a 1000 ms (1 segundo)
+          ></motion.div>
           <span>the best fitness club in the city</span>
         </div>
 
@@ -57,11 +64,16 @@ function Hero() {
 
       <div className="right-h">
         <button className="btn">Join Now</button>
-        <div className="heart-rate">
+        <motion.div
+          initial={{ right: "-1px" }}
+          whileInView={{ right: "4rem" }}
+          transition={transition}
+          className="heart-rate"
+        >
           <img src={heart} alt="" />
           <span>Heart Rate</span>
           <span> 116Bpm</span>
-        </div>
+        </motion.div>
         {/* hero image */}
         <img src={hero_image} alt="" className="hero-image" />
         <img src={hero_image_back} alt="" className="hero-image-back" />

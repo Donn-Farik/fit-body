@@ -1,8 +1,11 @@
 import "./App.css";
+import Footer from "./componente/Footer/Footer";
 import Hero from "./componente/Hero/Hero";
+import Join from "./componente/Join/Join";
 import Plans from "./componente/Plans/Plans";
 import Programs from "./componente/Programs/Programs";
 import Reason from "./componente/Reason/Reason";
+import Testimonials from "./componente/Testimonials/Testimonials";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <Programs />
       <Reason />
       <Plans />
+      <Testimonials />
+      <Join />
+      <Footer />
     </div>
   );
 }
