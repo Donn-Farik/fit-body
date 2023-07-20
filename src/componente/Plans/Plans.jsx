@@ -4,7 +4,7 @@ import witeTick from "../../assets/whiteTick.png";
 
 function Plans() {
   return (
-    <div className="plans-container">
+    <div className="plans-container" id="plans">
       <div className="progrmas-header" style={{ gap: "2rem" }}>
         <span className="stroke-text">READY TO START</span>
         <span>YOUR JOURNEY</span>
